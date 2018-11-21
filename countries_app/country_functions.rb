@@ -1,3 +1,10 @@
+def population_density( country )
+  if (country['area'] && country['population'])
+    density = country['population'] / country['area']
+  end
+  return density || 'No data'
+end
+
 def name_of_first_country(countries)
   #YOUR CODE HERE
   return countries[0]["name"]
@@ -37,5 +44,3 @@ def population_of_region(countries, region)
   end
   return total_population
 end
-
-population_of_region(countries, "Asia")
